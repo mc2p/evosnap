@@ -20,7 +20,7 @@ class DataElementEncoder(JSONEncoder):
         return any([isinstance(obj, c) for c in classes])
 
     def default(self, o):
-        if self.in_module(o):
+        if self.in_module(o) and not isinstance(o, enum.Enum):
             __camelcase = '_'+o.__class__.__name__+'__camelcase'
             __order = '_'+o.__class__.__name__+'__order'
             res = dict(o.__dict__)

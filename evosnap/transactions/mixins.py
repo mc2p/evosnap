@@ -202,9 +202,9 @@ class TransactionRequestMixin(ServiceInformationRequestMixin):
         if response.status_code!=200 and response.status_code!=201:
             try:
                 msg = str(response.status_code)+' '+Response(response.text).to_pretty_json()
-                # print(response.request.body)
-                # print(response.headers)
-                # print(response.request.headers)
+                print(response.request.body)
+                print(response.headers)
+                print(response.request.headers)
                 raise TransactionRequestException(msg)
             except JSONDecodeError:
                 msg = str(response.status_code) + ' ' + response.text
