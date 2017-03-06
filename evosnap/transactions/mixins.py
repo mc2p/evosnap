@@ -1,5 +1,9 @@
 import json
 from collections import OrderedDict
+
+# Compat between Python 3.4 and Python 3.5
+if not hasattr(json, 'JSONDecodeError'):
+    json.JSONDecodeError = ValueError
 from json import JSONDecodeError
 
 import requests
@@ -199,12 +203,12 @@ class TransactionRequestMixin(ServiceInformationRequestMixin):
             auth=(self.session_token, ''),
             verify=self.ssl_verification
         )
-        if response.status_code!=200 and response.status_code!=201:
+        if response.status_code!=200 and response.status_code!=201 and response.status_code!=400:
             try:
                 msg = str(response.status_code)+' '+Response(response.text).to_pretty_json()
-                print(response.request.body)
-                print(response.headers)
-                print(response.request.headers)
+                # print(response.request.body)
+                # print(response.headers)
+                # print(response.request.headers)
                 raise TransactionRequestException(msg)
             except JSONDecodeError:
                 msg = str(response.status_code) + ' ' + response.text
