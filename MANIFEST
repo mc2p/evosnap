@@ -18,11 +18,13 @@ evosnap/transactions/bankcard/card_data.py
 evosnap/transactions/bankcard/card_security_data.py
 evosnap/transactions/bankcard/ecommerce_security_data.py
 evosnap/transactions/bankcard/international_avs_data.py
+evosnap/transactions/bankcard/international_avs_override.py
 evosnap/transactions/bankcard/internet_transaction_data.py
 evosnap/transactions/bankcard/return_by_id.py
 evosnap/transactions/base/__init__.py
 evosnap/transactions/base/addendum.py
 evosnap/transactions/base/adjust.py
+evosnap/transactions/base/resubmit.py
 evosnap/transactions/base/transaction.py
 evosnap/transactions/base/transaction_data.py
 evosnap/transactions/base/transaction_tender_data.py

@@ -16,7 +16,7 @@ class TransactionData:
                  internet_transaction_data:InternetTransactionData=None, invoice_number=None, is_partial_shipment=None,
                  is_quasi_cash=None, lane_id=None, partial_approval_capable=None, score_threshold=None,
                  terminal_id=None, tip_amount=None, transaction_code=None,
-                 transaction_data_type:TransactionDataType=None):
+                 transaction_data_type:TransactionDataType=None, is_3_d_secure=None):
         """
         Base class object containing information for a specific transaction. This element is Required.
         :param activation: Contains information for activating an account. This is a required element.
@@ -72,6 +72,9 @@ class TransactionData:
         self.internet_transaction_data=internet_transaction_data
         self.__order.append('InternetTransactionData')
         self.invoice_number=invoice_number
+        if is_3_d_secure:
+            self.is_3_d_secure=is_3_d_secure
+            self.__order.append('Is3DSecure')
         self.__order.append('InvoiceNumber')
         if is_partial_shipment:
             self.is_partial_shipment=is_partial_shipment
