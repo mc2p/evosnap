@@ -4,9 +4,12 @@ from evosnap.response import Response
 from evosnap.transactions.base.transaction_tender_data import TransactionTenderData
 from evosnap.transactions.base.transaction import Transaction
 from evosnap.transactions.base.undo import Undo
+from evosnap.transactions.base.resubmit import Resubmit
 from evosnap.transactions.base.addendum import Addendum
 from evosnap.transactions.base.adjust import Adjust
 from evosnap.transactions.base.transaction_data import TransactionData
+from evosnap.transactions.base.transaction_customer_data import TransactionCustomerData
+from evosnap.transactions.base.customer_info import CustomerInfo
 from evosnap.transactions.base.unmanaged import Unmanaged
 from evosnap.transactions.bankcard.capture import Capture
 from evosnap.transactions.bankcard.card_data import CardData
