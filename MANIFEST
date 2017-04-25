@@ -24,8 +24,10 @@ evosnap/transactions/bankcard/return_by_id.py
 evosnap/transactions/base/__init__.py
 evosnap/transactions/base/addendum.py
 evosnap/transactions/base/adjust.py
+evosnap/transactions/base/customer_info.py
 evosnap/transactions/base/resubmit.py
 evosnap/transactions/base/transaction.py
+evosnap/transactions/base/transaction_customer_data.py
 evosnap/transactions/base/transaction_data.py
 evosnap/transactions/base/transaction_tender_data.py
 evosnap/transactions/base/undo.py

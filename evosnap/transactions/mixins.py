@@ -88,7 +88,7 @@ class TransactionRequestMixin(ServiceInformationRequestMixin):
             ('$type', RequestType.resubmit.value),
             ('ApplicationProfileId', self.application_profile_id),
             ('MerchantProfileId', self.merchant_profile_id),
-            ('DifferenceData', self.data),
+            ('Transaction', self.data),
         ]), cls=DataElementEncoder)
 
     @property
