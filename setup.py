@@ -9,7 +9,7 @@ setup(
         'evosnap.transactions.base',
         'evosnap.transactions.bankcard',
     ],
-    version='0.3.0',
+    version='0.3.1',
     description='Python 3 package that integrates with EVO Snap* Commerce Web Services API',
     author='Javier Ros Honduvilla',
     author_email='javier.ros.honduvilla@gmail.com',

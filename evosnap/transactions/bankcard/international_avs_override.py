@@ -2,7 +2,7 @@ from evosnap import constants
 
 
 class InternationalAVSOverride:
-    def __init__(self, skip_a_v_s=True, ignore_a_v_s=True, a_v_s_reject_codes=None):
+    def __init__(self, skip_a_v_s=False, ignore_a_v_s=False, a_v_s_reject_codes=None):
         """
         Cardholder address data for Address Verification System (AVS). This element is Optional.
         :param activation: Contains information for activating an account. This is a required element.
