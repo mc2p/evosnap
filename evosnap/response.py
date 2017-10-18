@@ -1,4 +1,5 @@
 import json
+from json import JSONDecodeError
 
 
 class Response:
@@ -7,9 +8,13 @@ class Response:
         Defines a Response object
         :param data: a string containing xml data
         """
+        from evosnap import TransactionRequestException
         if data:
             if isinstance(data,str):
-                self._json = json.loads(data)
+                try:
+                    self._json = json.loads(data)
+                except JSONDecodeError:
+                    raise TransactionRequestException(data)
             elif isinstance(data, dict):
                 self._json = data
             else:
@@ -30,7 +35,7 @@ class Response:
                 element = element.get(n, {})
             return element.get(node[-1])
         except AttributeError:
-            raise AttributeError(item+' not found in response.')
+            raise AttributeError('{} not found in response.'.format(item))
 
     def to_json_string(self):
         """
