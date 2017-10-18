@@ -2,11 +2,16 @@
 setup.cfg
 setup.py
 evosnap/__init__.py
+evosnap/application_request.py
 evosnap/constants.py
 evosnap/data_element_encoder.py
 evosnap/exceptions.py
 evosnap/request.py
 evosnap/response.py
+evosnap/merchant_applications/__init__.py
+evosnap/merchant_applications/pos_deployment_location.py
+evosnap/merchant_applications/pos_device.py
+evosnap/merchant_applications/primary_owner.py
 evosnap/service_information/__init__.py
 evosnap/service_information/mixins.py
 evosnap/transactions/__init__.py
