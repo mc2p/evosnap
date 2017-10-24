@@ -21,21 +21,25 @@ class MerchantApplicationRequest():
             'ApplicationType', 'CompanyName', 'RegisteredCompanyName', 'ContactFirstName', 'ContactLastName',
             'ContactPostalCode', 'PhysicalAddress', 'PhysicalCity', 'PhysicalCounty', 'PhysicalPostalCode',
             'PhysicalCountry', 'PhysicalPhone', 'BusinessStructureTypeId', 'MerchantCategoryCode',
-            'CompanyObjective', 'VATID', 'BankName', 'BankAccountHolderName', 'IBAN',
+            'CompanyObjective', 'VATID', 'BankName', 'BankAccountHolderName', 'BankIBAN',
             'BankBICSWIFT', 'InvoiceBankName', 'InvoiceBankAccountOwner', 'InvoiceBankIBAN',
-            'InvoiceBankAddress1', 'InvoiceBankCity', 'InvoiceBankCountry', 'ForecastMaxTicketSizeAmount',
-            'ForecastAllVolume', 'ForecastAveTicketSizeAmount', 'ForecastRefundPercentage',
-            'PSPaidInAdvanceTF', 'PSPaidInAdvanceAvgAnnualPercentage',
-            'PSPaidInAdvanceAvgDeliveryDays', 'PCIHasSAQ', 'PCIThirdPartyRemotes',
+            'InvoiceBankAddress1', 'InvoiceBankCity', 'ForecastMaxTicketSizeAmount', 'ForecastAllVolume',
+            'ForecastAveTicketSizeAmount', 'ForecastRefundPercentage', 'PSPaidInAdvanceTF',
+            'PSPaidInAdvanceAvgAnnualPercentage', 'PSPaidInAdvanceAvgDeliveryDays', 'PCIHasSAQ', 'PCIThirdPartyRemotes',
             'PCICardDataStored', 'PCIHadDataCompromise', 'NoVat', 'PrimaryOwnerArray',
             'ProductPackageID', 'OtherServicesMOTO', 'OtherServicesSettlement',
             'OtherServicesAMEXRouting', 'OtherServicesSnapEcommerce', 'OtherServicesChargebacks',
             'OtherServicesRecurringPayments', 'OtherServicesChinaUnionPay', 'OtherServices3DSecure',
             'OtherServicesCashback', 'OtherServicesPremiumService', 'OtherServicesDCC',
             'OtherServicesReceiptLogo', 'OtherServicesTipp', 'OtherServicesMonths',
-            'OtherServicesMonthsDeclaration', 'OtherServicesCVV', 'ecommDeployment', 'posDeploymentArray',
-            'InvoiceBankAddress2', 'InvoiceBankAddressFloorNumber', 'InvoiceBankAddressDoorNumber',
-            'InvoiceBankAddressBuildingNumber', 'InvoiceBankZip', 'DocumentationVersion'
+            'OtherServicesMonthsDeclaration', 'OtherServicesCVV', 'EcommGateway',
+            'posDeploymentArray', 'InvoiceBankAddress2', 'InvoiceBankAddressFloorNumber',
+            'InvoiceBankAddressDoorNumber', 'InvoiceBankAddressBuildingNumber', 'InvoiceBankZip',
+            'DocumentationVersion', 'PricingComponentSettingArray', 'IsOnPepList', 'IsOnSanctionList',
+            'EcommSolutionType', 'EcommShoppingCart', 'EcommIPAddress', 'TechnicalContactFirstName',
+            'TechnicalContactLastName', 'TechnicalContactEmail', 'TechnicalContactPhoneNumber',
+            'EcommAlternativePaymentMethod', 'PaymentMethodOtherName', 'PaymentUsername', 'PaymentPassword',
+            'PaymentSignature', 'PaymentLogoURL', 'CurrencyCode',
         ]
         self.__camelcase = [
             'hash_value',
@@ -43,9 +47,9 @@ class MerchantApplicationRequest():
             'application_type', 'company_name', 'registered_company_name', 'contact_first_name', 'contact_last_name',
             'contact_postal_code', 'physical_address', 'physical_city', 'physical_county', 'physical_postal_code',
             'physical_country', 'physical_phone', 'business_structure_type_id', 'merchant_category_code',
-            'company_objective', 'v_a_t_i_d', 'bank_name', 'bank_account_holder_name', 'i_b_a_n',
+            'company_objective', 'v_a_t_i_d', 'bank_name', 'bank_account_holder_name', 'bank_i_b_a_n',
             'bank_b_i_c_s_w_i_f_t', 'invoice_bank_name', 'invoice_bank_account_owner', 'invoice_bank_i_b_a_n',
-            'invoice_bank_address1', 'invoice_bank_city', 'invoice_bank_country', 'forecast_max_ticket_size_amount',
+            'invoice_bank_address1', 'invoice_bank_city', 'forecast_max_ticket_size_amount',
             'forecast_all_volume', 'forecast_ave_ticket_size_amount', 'forecast_refund_percentage',
             'p_s_paid_in_advance_t_f', 'p_s_paid_in_advance_avg_annual_percentage',
             'p_s_paid_in_advance_avg_delivery_days', 'p_c_i_has_s_a_q', 'p_c_i_third_party_remotes',
@@ -55,11 +59,16 @@ class MerchantApplicationRequest():
             'other_services_recurring_payments', 'other_services_china_union_pay', 'other_services_3_d_secure',
             'other_services_cashback', 'other_services_premium_service', 'other_services_d_c_c',
             'other_services_receipt_logo', 'other_services_tipp', 'other_services_months',
-            'other_services_months_declaration', 'other_services_c_v_v', 'invoice_bank_address2',
+            'other_services_months_declaration', 'other_services_c_v_v', 'ecomm_gateway', 'invoice_bank_address2',
             'invoice_bank_address_floor_number', 'invoice_bank_address_door_number',
-            'invoice_bank_address_building_number', 'invoice_bank_zip', 'documentation_version'
+            'invoice_bank_address_building_number', 'invoice_bank_zip', 'documentation_version',
+            'pricing_component_setting_array', 'is_on_pep_list', 'is_on_sanction_list',
+            'ecomm_solution_type', 'ecomm_shopping_cart', 'ecomm_i_p_address', 'technical_contact_first_name',
+            'technical_contact_last_name', 'technical_contact_email', 'technical_contact_phone_number',
+            'ecomm_alternative_payment_method', 'payment_method_other_name', 'payment_username', 'payment_password',
+            'payment_signature', 'payment_logo_u_r_l', 'currency_code',
         ]
-        self.__lower_camelcase = ['ecomm_deployment', 'pos_deployment_array']
+        self.__lower_camelcase = ['pos_deployment_array']
         self.__exclude = ['ssl_verification', 'request_method', 'mas_baseurl', 'secret']
 
         self.ssl_verification = kwargs.get('ssl_verification', True)
@@ -93,7 +102,7 @@ class MerchantApplicationRequest():
         self.v_a_t_i_d = kwargs.get('v_a_t_i_d')
         self.bank_name = kwargs.get('bank_name')
         self.bank_account_holder_name = kwargs.get('bank_account_holder_name')
-        self.i_b_a_n = kwargs.get('i_b_a_n')
+        self.bank_i_b_a_n = kwargs.get('bank_i_b_a_n')
         self.bank_b_i_c_s_w_i_f_t = kwargs.get('bank_b_i_c_s_w_i_f_t')
         self.invoice_bank_name = kwargs.get('invoice_bank_name')
         self.invoice_bank_account_owner = kwargs.get('invoice_bank_account_owner')
@@ -131,16 +140,34 @@ class MerchantApplicationRequest():
         self.other_services_months = kwargs.get('other_services_months')
         self.other_services_months_declaration = kwargs.get('other_services_months_declaration')
         self.other_services_c_v_v = kwargs.get('other_services_c_v_v')
-        self.ecomm_deployment = kwargs.get('ecomm_deployment')
+        self.ecomm_gateway = kwargs.get('ecomm_gateway')
         self.pos_deployment_array = kwargs.get('pos_deployment_array')
-
-        # OPTIONAL
         self.invoice_bank_address2 = kwargs.get('invoice_bank_address2')
         self.invoice_bank_address_floor_number = kwargs.get('invoice_bank_address_floor_number')
         self.invoice_bank_address_door_number = kwargs.get('invoice_bank_address_door_number')
         self.invoice_bank_address_building_number = kwargs.get('invoice_bank_address_building_number')
         self.invoice_bank_zip = kwargs.get('invoice_bank_zip')
         self.documentation_version = kwargs.get('documentation_version')
+
+        # ECOMMERCE
+
+        self.pricing_component_setting_array = kwargs.get('pricing_component_setting_array')
+        self.is_on_pep_list = kwargs.get('is_on_pep_list')
+        self.is_on_sanction_list = kwargs.get('is_on_sanction_list')
+        self.ecomm_solution_type = kwargs.get('ecomm_solution_type')
+        self.ecomm_shopping_cart = kwargs.get('ecomm_shopping_cart')
+        self.ecomm_i_p_address = kwargs.get('ecomm_i_p_address')
+        self.technical_contact_first_name = kwargs.get('technical_contact_first_name')
+        self.technical_contact_last_name = kwargs.get('technical_contact_last_name')
+        self.technical_contact_email = kwargs.get('technical_contact_email')
+        self.technical_contact_phone_number = kwargs.get('technical_contact_phone_number')
+        self.ecomm_alternative_payment_method = kwargs.get('ecomm_alternative_payment_method')
+        self.payment_method_other_name = kwargs.get('payment_method_other_name')
+        self.payment_username = kwargs.get('payment_username')
+        self.payment_password = kwargs.get('payment_password')
+        self.payment_signature = kwargs.get('payment_signature')
+        self.payment_logo_u_r_l = kwargs.get('payment_logo_u_r_l')
+        self.currency_code = kwargs.get('currency_code')
 
         self.hash_value = self.hash
 
@@ -154,11 +181,15 @@ class MerchantApplicationRequest():
 
     @property
     def primary_owner_array_hash(self):
-        return ''.join([f.hash_str for f in self.primary_owner_array])
+        return ''.join([f.hash_str for f in self.primary_owner_array or []])
 
     @property
     def pos_deployment_array_hash(self):
-        return ''.join([f.hash_str for f in self.pos_deployment_array])
+        return ''.join([f.hash_str for f in self.pos_deployment_array or []])
+
+    @property
+    def pricing_component_setting_array_hash(self):
+        return ''.join([f.hash_str for f in self.pricing_component_setting_array or []])
 
     @property
     def hash_str(self):
@@ -167,7 +198,7 @@ class MerchantApplicationRequest():
             'application_type', 'company_name', 'registered_company_name', 'contact_first_name', 'contact_last_name',
             'contact_postal_code', 'physical_address', 'physical_city', 'physical_county', 'physical_postal_code',
             'physical_country', 'physical_phone', 'business_structure_type_id', 'merchant_category_code',
-            'company_objective', 'v_a_t_i_d', 'bank_name', 'bank_account_holder_name', 'i_b_a_n',
+            'company_objective', 'v_a_t_i_d', 'bank_name', 'bank_account_holder_name', 'bank_i_b_a_n',
             'bank_b_i_c_s_w_i_f_t', 'invoice_bank_name', 'invoice_bank_account_owner', 'invoice_bank_i_b_a_n',
             'invoice_bank_address1', 'invoice_bank_city', 'invoice_bank_country', 'forecast_max_ticket_size_amount',
             'forecast_all_volume', 'forecast_ave_ticket_size_amount', 'forecast_refund_percentage',
@@ -179,10 +210,15 @@ class MerchantApplicationRequest():
             'other_services_recurring_payments', 'other_services_china_union_pay', 'other_services_3_d_secure',
             'other_services_cashback', 'other_services_premium_service', 'other_services_d_c_c',
             'other_services_receipt_logo', 'other_services_tipp', 'other_services_months',
-            'other_services_months_declaration', 'other_services_c_v_v', 'ecomm_deployment',
+            'other_services_months_declaration', 'other_services_c_v_v', 'ecomm_gateway',
             'pos_deployment_array_hash', 'invoice_bank_address2',
             'invoice_bank_address_floor_number', 'invoice_bank_address_door_number',
-            'invoice_bank_address_building_number', 'invoice_bank_zip', 'documentation_version'
+            'invoice_bank_address_building_number', 'invoice_bank_zip', 'documentation_version',
+            'pricing_component_setting_array_hash', 'is_on_pep_list', 'is_on_sanction_list',
+            'ecomm_solution_type', 'ecomm_shopping_cart', 'ecomm_i_p_address', 'technical_contact_first_name',
+            'technical_contact_last_name', 'technical_contact_email', 'technical_contact_phone_number',
+            'ecomm_alternative_payment_method', 'payment_method_other_name', 'payment_username', 'payment_password',
+            'payment_signature', 'payment_logo_u_r_l', 'currency_code',
         ]
 
         return ''.join([str(getattr(self,f)).strip() for f in required if getattr(self,f) is not None])
