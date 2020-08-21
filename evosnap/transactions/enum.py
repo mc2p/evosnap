@@ -23,6 +23,11 @@ class TransactionType(Enum):
     encryption = 'EncryptionTransaction, http://schemas.evosnap.com/CWS/v2.0/Transactions/EncryptionTransaction'
 
 
+class TransactionTenderType(Enum):
+    process_as_credit = 'ProcessAsCredit'
+    process_as_pin_debit = 'ProcessAsPinDebit'
+
+
 class TransactionDataType(Enum):
     bankcard = 'BankcardTransactionDataPro, http://schemas.evosnap.com/CWS/v2.0/Transactions/Bankcard/Pro'
     electronic_checking = 'ElectronicCheckingTransactionData, http://schemas.evosnap.com/CWS/v2.0/Transactions/ElectronicChecking'
