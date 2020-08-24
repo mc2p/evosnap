@@ -203,7 +203,7 @@ class TransactionRequestMixin(ServiceInformationRequestMixin):
             auth=(self.session_token, ''),
             verify=self.ssl_verification
         )
-        if response.status_code!=200 and response.status_code!=201 and response.status_code!=400:
+        if not response.status_code in [200, 201, 400, 401]:
             try:
                 msg = str(response.status_code)+' '+Response(response.text).to_pretty_json()
                 # print(response.request.body)
