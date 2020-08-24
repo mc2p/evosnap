@@ -22,7 +22,7 @@ from evosnap.transactions.bankcard.internet_transaction_data import InternetTran
 from evosnap.transactions.bankcard.return_by_id import ReturnById
 from evosnap.transactions.enum import RequestType, TransactionType, TransactionDataType, CardType, GoodsType, \
     CustomerPresent, IndustryType, EntryMode, AccountType, CVDataProvided, TokenIndicator, ChargeType, \
-    PINDebitUndoReason, UndoReason
+    PINDebitUndoReason, UndoReason, TransactionTenderType
 from evosnap.merchant_applications.pos_deployment_location import POSDeploymentLocation
 from evosnap.merchant_applications.pos_device import POSDevice
 from evosnap.merchant_applications.primary_owner import PrimaryOwner
