@@ -2,4 +2,5 @@ from .base import Transaction, TransactionData, TransactionTenderData, Unmanaged
 from .bankcard import CardData, CardSecurityData, EcommerceSecurityData, InternationalAVSData, ReturnById, Capture
 from .bankcard import InternetTransactionData
 from .enum import RequestType, TransactionType, TransactionDataType, CardType, GoodsType, CustomerPresent, \
-    IndustryType, EntryMode, AccountType, CVDataProvided, TokenIndicator, ChargeType, PINDebitUndoReason, UndoReason
+    IndustryType, EntryMode, AccountType, CVDataProvided, TokenIndicator, ChargeType, PINDebitUndoReason, UndoReason, \
+    TransactionTenderType
